@@ -126,17 +126,14 @@ class AuthController extends Controller
     // **Logout**
     public function logout(Request $request)
     {
+        
         if (Auth::guard('admin')->check()) {
-            Auth::guard('admin')->logout();
             return redirect()->route('admin.login');
         } elseif (Auth::guard('enseignant')->check()) {
-            Auth::guard('enseignant')->logout();
             return redirect()->route('teacher.login');
         } elseif (Auth::guard('tuteur')->check()) {
-            Auth::guard('tuteur')->logout();
             return redirect()->route('parent.login');
         } elseif (Auth::guard('eleve')->check()) {
-            Auth::guard('eleve')->logout();
             return redirect()->route('eleve.login');
         }
 

@@ -172,9 +172,11 @@ Route::prefix('tuteurs')->middleware(['auth:tuteur'])->group(function () {
 
 
 Route::get('/', function () {
-    return view('admin');
+    return view('dashboard');
 });
-
+Route::get('/solutions', function () {
+    return view('solutions');
+});
 // Admin Login
 Route::get('/admin/login', [AuthController::class, 'showAdminLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AuthController::class, 'adminLogin'])->name('admin.redirect');
@@ -193,6 +195,8 @@ Route::post('/students/login', [AuthController::class, 'eleveLogin']);
 
 // Logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+//solutions
 
 Route::get('/classes/get-options/{section_id}', [ClasseController::class, 'get_options'])->name('get_option');
 Route::get('/sections/get-inscription/{section_id}', [SectionController::class, 'get_inscription'])->name('get_inscription');
