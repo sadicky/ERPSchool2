@@ -12,7 +12,7 @@ class Utilisateur extends Authenticatable
     protected $primaryKey = 'user_id';
     public $timestamps = false;
     
-    public $fillable = ['matricule','pwd','role_id','status'];	
+    public $fillable = ['matricule','password','role_id','status'];	
 
     public function role(){
         return $this->belongsTo(Role::class,'role_id');

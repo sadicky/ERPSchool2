@@ -20,7 +20,7 @@ class Admin extends Model
         'email',
         'contact',
         'sexe',
-        'user_id ',
+        'user_id',
         'statut'
     ];
     public $timestamps = false;

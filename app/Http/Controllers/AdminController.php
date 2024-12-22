@@ -41,15 +41,15 @@ class AdminController extends Controller
         //
         $string = "0123456789";
         $string = str_shuffle($string);
-        $matricule = substr($string, 0, 6);
+        $matriculeA = substr($string, 0, 6);
 
-        $user = Utilisateur::create([
-            'matricule' => $matricule,
+        $userA = Utilisateur::create([
+            'matricule' => $matriculeA,
             'password' => Hash::make('123456'),
             'role_id' => Role::where('role_name', 'Admin')->firstOrFail()->role_id,
             'status' => '1'
         ]);
-
+        $user_id = $userA->user_id;
         Admin::create([
             'nom' => $request->nom,
             'prenom' => $request->prenom,
@@ -57,7 +57,7 @@ class AdminController extends Controller
             'email' => $request->email,
             'contact' => $request->contact,
             'sexe' => $request->sexe,
-            'user_id' => $user->user_id,
+            'user_id' => $user_id,
             'statut' => '1',
         ]);
         
