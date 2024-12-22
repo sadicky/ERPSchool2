@@ -4,6 +4,9 @@
     </li>
     <li class="nav-item">
         <a href="{{route('t.horaires')}}" class="nav-link"><i class="flaticon-calendar"></i><span>Horaires</span></a>
+    </li> 
+    <li class="nav-item">
+        <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Disciplines</span></a>
     </li>
     <li class="nav-item">
         <a href="#" class="nav-link"><i class="flaticon-bed"></i><span>Communiqués</span></a>

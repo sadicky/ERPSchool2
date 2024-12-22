@@ -2,7 +2,7 @@
     <li class="nav-item">
         <a href="{{route('eleve.dashboard')}}" class="nav-link"><i class="flaticon-dashboard"></i><span>Mes Informations</span></a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item"> 
         <a href="{{route('e.horaires')}}" class="nav-link"><i class="flaticon-calendar"></i><span>Mes Horaires</span></a>
     </li>
     <li class="nav-item">
